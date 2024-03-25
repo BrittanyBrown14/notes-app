@@ -1,8 +1,5 @@
 import { FormEvent, useEffect, useState } from 'react';
 import './App.css';
-import { json } from 'stream/consumers';
-import { errorMonitor } from 'events';
-
 const App = () => {
 
   type Note = {
@@ -125,8 +122,7 @@ const App = () => {
       catch (error) {
         console.log(error);
       }
-  }
-;
+  };
 
   return(
     
@@ -147,8 +143,6 @@ const App = () => {
         ) : (
             <button className="notes--button" type="submit">Add Note</button>          
         )}
-
-
 
       </form>
       <div className='notes--line'></div>
